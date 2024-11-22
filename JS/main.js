@@ -12,3 +12,13 @@ window.addEventListener("scroll", function () {
   }
   ubicacionPrincipal = desplazamientoActual; //200
 });
+
+document.querySelectorAll('#icon').forEach(vid =>{
+  vid.onclick = () =>{
+      document.querySelector('.popup_video').style.display = 'block';
+      document.querySelector('.popup_video video').src = vid.getAttribute('src');
+  }
+});
+document.querySelector('.popup_video span').onclick = () =>{
+  document.querySelector('.popup_video').style.display = 'none';
+}
