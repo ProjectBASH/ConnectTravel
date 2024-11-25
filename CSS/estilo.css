@@ -224,10 +224,12 @@ nav {
     border-color: orange;
   }
 }
+
 .text:before {
   content: attr(data-text);
   animation: changeText 18s infinite;
 }
+
 @keyframes changeText {
   0% {
     content: "a tu comodidad.";
@@ -249,32 +251,15 @@ nav {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .mockup {
-    width: 600px;
-    height: auto;
-  }
-
-  .title {
-    font-size: 50px;
-  }
-
-  .copy {
-    font-size: 22px;
-  }
-
-  .cta {
-    padding: 15px 22px;
-  }
-}
+/*SLIDER DE IMAGENES*/
 
 #slider {
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 40px;
   width: 100%;
   max-width: 92%;
   text-align: center;
-  background-color: #e1f0e6;
+  background-color: #fff;
 }
 
 #slider input[type="radio"] {
@@ -308,6 +293,7 @@ nav {
   width: 400%;
   line-height: 0;
   height: 500px;
+  animation: slide 12s infinite;
 }
 
 #slides .slide {
@@ -414,6 +400,120 @@ nav {
   margin-bottom: 25px;
 }
 
+/*PROMO TEMPORADA*/
+
+.test_contain{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+
+.testimony{
+  padding-top: 30px;
+  background: #f2f2f2;
+}
+
+.subtitle{
+  font-style: italic;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.subtitle--cont{
+  text-align: center;
+}
+
+.testimony-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimony__card{
+  width: 30%;
+  height: 500px;
+  background: linear-gradient(180deg, #242855 0%, #242855 100%);
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.testimony__img{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.testimony__copy{
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  width: 90%;
+  background: linear-gradient(180deg, #242855 0%, #242855 100%);
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow) var(--color_shadow);
+  padding: 15px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.testimony__logo{
+  font-size: 40px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.testimony__name{
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  line-height:28px;
+}
+
+.testimony__position{
+  color: var(--gray);
+}
+
+.testimony__text{
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.google__logo{
+  margin-bottom: 20px;
+}
+
+
+.testimony__history{
+  font-size: 21px;
+  font-weight: 300;
+  margin: 0 20px;
+}
+
+
+.testimony__info{
+  width: 70%;
+}
+
+.logo--picture{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center top;
+}
+
+/*CARDS PROMOS*/
+
 .contenedor1 {
   max-width: 1200px;
   overflow: hidden;
@@ -424,7 +524,7 @@ nav {
   background: #f2f2f2;
 }
 
-.about-us h2 {
+.titulo {
   margin-left: 23px;
   font-size: 40px;
   letter-spacing: 5px;
@@ -577,7 +677,7 @@ nav {
   padding: 0;
   white-space: nowrap;
   position: absolute;
-  animation: runText 6s linear infinite;
+  animation: runText 4s linear infinite;
 }
 
 @keyframes runText {
@@ -588,6 +688,8 @@ nav {
     transform: translateX(-120%);
   }
 }
+
+/*POP UP VIDEO*/
 
 .contenedor1 .popup_video {
   position: fixed;
@@ -623,8 +725,121 @@ nav {
   cursor: pointer;
 }
 
-.services-section {
+/*TEAM SECTION*/
+.team_container{
+  overflow: hidden;
+}
+
+.team_container > h4{
+  margin-top: 20px;
+}
+
+.team{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  overflow: hidden;
+  min-height: 90vh;
+  background: #fff;
+}
+
+.tarjeta{
+  position: relative;
+  margin: 0 0 20px 0;
+  width: 250px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px 2px rgba(73, 59, 52, .4);
+}
+
+.tarjeta .contenido{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  background: #f2f2f2;
+  z-index: 5;
+}
+
+.tarjeta .contenido .img_persona{
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+.tarjeta .contenido .img_persona img{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.tarjeta .contenido span{
   position: absolute;
+  width: 350px;
+  height: 200px;
+  background: linear-gradient(to right, #e1050f, #242855);
+  transition: all .5s;
+  top: -350px;
+}
+
+.tarjeta .contenido:hover span{
+  transform: translate(-120px, 280px) rotate(-35deg);
+}
+
+.tarjeta .contenido h4{
+  font-size: 18px;
+  color: #383b61;
+  margin-bottom: 5px;
+}
+
+.tarjeta .contenido h6{
+  font-size: 13px;
+  color: red;
+}
+
+.tarjeta .contenido p{
+  font-size: 13px;
+  color: #1a161f;
+  margin-top: 10px;
+}
+
+.tarjeta .enlaces{
+  position: absolute;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(155, 155, 155, .5);
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+  padding: 20px;
+  align-items: center;
+  right: 10px;
+  top: 15px;
+  transition: all .5s;
+  z-index: 2;
+}
+
+.tarjeta:hover .enlaces{
+  right: -50px;
+  border-radius: 0 10px 10px 0;
+}
+
+.tarjeta .enlaces a:hover{
+  color: #fff;
+}
+
+/*SERVICES SECCTION*/
+
+.services-section {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -676,11 +891,11 @@ nav {
   width: 70px;
   height: 70px;
   border: 5px solid #383b61;
-  color: #82ccdd;
   transform: rotate(45deg);
   margin-bottom: 30px;
   margin-top: 16px;
   transition: 0.3s linear;
+  padding-bottom: 0px;
 }
 
 .service-icon a {
@@ -689,7 +904,7 @@ nav {
 
 .service-icon i {
   color: #ffffff;
-  line-height: 70px;
+  line-height: 60px;
   transform: rotate(-45deg);
   font-size: 26px;
 }
@@ -698,6 +913,7 @@ nav {
   background: #383b61;
   color: #fff;
 }
+
 .service-title {
   font-size: 18px;
   font-weight: bold;
@@ -718,6 +934,96 @@ nav {
 
 .BGVid video {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+}
+
+/*FOOTER*/
+
+.pie-pagina{
+  width: 100%;
+  background-color: #fff;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 40px 0px;
+}
+
+.pie-pagina .grupo-1 .box{
+  height: 170px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #383b61;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #383b61;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #383b61;
+  border-radius: 20%;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  box-shadow: 0 4px 10px rgba(17, 29, 48, 0.26);
+  background-color: #e1050f;
+}
+.pie-pagina .grupo-2{
+  background-color: #383b61;
+  padding: 15px 10px;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+/*ICONO WHATSAPP FLOAT*/
+
+.btn-wsp{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0ec244;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  animation: .5s;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.btn-wsp:hover{
+  text-decoration: none;
+  transform: scale(1.2);
 }
