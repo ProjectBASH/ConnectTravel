@@ -22,3 +22,13 @@ document.querySelectorAll('#icon').forEach(vid =>{
 document.querySelector('.popup_video span').onclick = () =>{
   document.querySelector('.popup_video').style.display = 'none';
 }
+
+let currentSlide = 1;
+const totalSlides = 4;
+
+function changeSlide() {
+  currentSlide = (currentSlide % totalSlides) + 1;
+  document.getElementById('slide' + currentSlide).checked = true;
+}
+
+setInterval(changeSlide, 3000); // Cambia cada 3 segundos
