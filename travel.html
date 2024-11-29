@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Connect Travel</title>
+        <link rel="icon" href="IMG/IconoNB.ico" />
+        <link rel="stylesheet" href="CSS/estilo.css" />
+        <link rel="stylesheet" href="CSS/Testilo.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="IMG/Icons/css/all.css">
+        <script src="JS/jquery-3.2.1.js"></script>
+        <script src="JS/filtro.js"></script>
+    </head>
+    <body>
+    <nav>
+      <section class="contenedor nav">
+        <div class="LogNav">
+          <a href="#Inicio"><img src="IMG/LogoCTNB.png" alt="" data-aos="zoom-in-left" /></a>
+        </div>
+        <div class="enlaces-header" data-aos="zoom-in-right">
+            <a href="index.html#Inicio">Inicio</a>
+            <a href="index.html#Promos">Temporada</a>
+            <a href="index.html#equipo">Conocenos</a>
+            <a href="index.html#mapa">Encuentranos</a>
+            <a href="index.html#Servicios">Servicios</a>
+        </div>
+      </section>
+    </nav>
+
+    <header class="hero" id="Inicio" data-aos="flip-up">
+        <section class="container hero__main">  
+            <div class="hero__textos">
+                <h1 class="title">CONNECT TRAVEL<span class="title--active"><br>Tu Mejor Opción al Viajar.</span></h1> 
+                <p class="copy">Nos encargamos de llevar el destino<br><span class="text copy__active"></span></p>
+            </div>
+            <img src="IMG/undraw_connected_world_wuay (1).png" class="mockup">
+        </section>
+    </header>
+
+    <section class="container-all-items">
+        <div class="contain-travel" data-aos="zoom-out-up">
+            <div class="info-travel">
+                <a class="travel-icon"><i class="fa-solid fa-route"><span id="contador-items">0</span></i></a>
+                <h3 class="titulo">Personaliza tu Viaje</h3>
+                <div class="border"></div>
+                <div class="imputs">
+                    <select name="" id="selectSalida">
+                        <option value="">Salida</option>
+                        <option value="">San Pedro Sula</option>
+                        <option value="">Tegucigalpa</option>
+                        <option value="">La Ceiba</option>
+                        <option value="">Roatan</option>
+                    </select>
+                    <input type="date" id="fechaSalida">
+                    <input type="date" id="fechaRegreso">
+                    <select class="set-category" id="selectDestino">
+                        <option value="" category="hide">Destino</option>
+                        <option value="" category="colombia">Colombia</option>
+                        <option value="" category="costa-rica">Costa Rica</option>
+                        <option value="" category="">España</option>
+                        <option value="" category="">Estados Unidos</option>
+                        <option value="" category="">Italia</option>
+                        <option value="" category="">México</option>
+                        <option value="" category="">Perú</option>
+                    </select>
+                    <div class="contain-btn">
+                        <a class="charge">Buscar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+      
+                </div>
+                <div class="cart-total">
+                  <h3>Total:</h3>
+                  <span class="total-pagar">$0</span>
+                </div>
+                <div class="contain-btn-i hidden-cart">
+                    <button class="charge-i" id="btn_send">Mandar Solicitud</button>
+                </div>
+              </div>
+        </div>
+        <div class="container-items" id="mostrador">
+            <div class="fila" category="colombia">
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img"><img src="IMG/hotel1-medellin.jpg" title="Hotel Poblado Plaza - Medellin Colombia"></div>
+                    <p class="descripcion">Hotel Poblado Plaza</p>
+                    <h6 style="display: none;">¡Precio por Noche!</h6>
+                    <span class="precio">L 2500.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/actividad1-medellin.jpg" title="Jardín Botánico - Medellin Colombia">
+                    </div>
+                    <p class="descripcion">Jardín Botánico</p>
+                    <h6 style="display: none;">¡Precio por Persona!</h6>
+                    <span class="precio">L 1200.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/actividad2-medellin.jpg" title="Museo de Antioquia - Medellin Colombia">
+                    </div>
+                    <p class="descripcion">Museo de Antioquia</p>
+                    <h6 style="display: none;">¡Precio por Persona!</h6>
+                    <span class="precio">L 1300.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/hotel2-medellin.jpg" title="Hotel San Fernando Plaza - Medellin Colombia">
+                    </div>
+                    <p class="descripcion">Hotel San Fernando Plaza</p>
+                    <h6 style="display: none;">¡Precio por Noche!</h6>
+                    <span class="precio">L 3000.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fila" category="costa-rica">
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="IMG/hotel1-costarica.jpeg" title="Hotel Radisson - Costa Rica">
+                    </div>
+                    <p class="descripcion">Hotel Radisson</p>
+                    <h6 style="display: none;">¡Precio por Noche!</h6>
+                    <span class="precio">L 2800.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/hotel2-costarica.jpg" title="Pachira Lodge - Costa Rica">
+                    </div>
+                    <p class="descripcion">Hotel Pachira Lodge</p>
+                    <h6 style="display: none;">¡Precio por Noche!</h6>
+                    <span class="precio">L 3200.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/actividad1-costarica.jpg" title="Avistamiento de Ballenas - Costa Rica">
+                    </div>
+                    <p class="descripcion">Abistamiento de Ballenas</p>
+                    <h6 style="display: none;">¡Precio por Persona!</h6>
+                    <span class="precio">L 1200.00</span>
+                  </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                  <div class="contenedor_foto">
+                    <div class="contain_img">
+                        <img src="img/actividad2-costarica.jpg" title="Senderismo entre Volcanes - Costa Rica">
+                    </div>
+                    <p class="descripcion">Senderismo entre Volcanes</p>
+                    <h6 style="display: none;">¡Precio por Persona!</h6>
+                    <span class="precio">L 2850.00</span>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <div class="contain-simg"><img src="img/1.png" alt="" id="img"></div>
+                <h2 id="modelo">Nike Modelo 1</h2>
+                <p id="descripcion"></p>
+    
+                <span class="precio" id="precio">1,300.00 L</span>
+    
+                <div class="fila-i">
+                    <button class="btn-add-cart">Agregar al Viaje</button>
+                </div>
+            </div>
+          </div>
+    </section>
+
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="IMG/LogoCTNB.png" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Nuestra principal misión es brindar los mejores precios en el mercado, trabajando con transparencia, esfuerzo, honestidad y la brevedad posible.</p>
+                <p>Nuestra principal visión es siempre estar a la vanguardia de los mejores servicios y destinos turisticos para que nuestros clientes puedan tener las mejores experiencias en sus viajes.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/share/Tp1ovSgJpqcAdDkP/?mibextid=LQQJ4d" target="_blank" class="fa-brands fa-facebook-f"></a>
+                    <a href="https://wa.me/+50494973332?" target="_blank" class="fa-brands fa-whatsapp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Connect Travel</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+  
+    <a href="https://wa.me/+50494973332?text=%C2%A1Hola%21%20Quiero%20me%20gustaria%20realizar%20mi%20viaje." class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp icon-whatsapp"></i></a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
