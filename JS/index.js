@@ -158,7 +158,7 @@ $(document).ready(function() {
 
     // Evento de clic para el botón
     $('#btn_send').click(function() {
-        const numeroTelefono = '+50494973332'; // Reemplaza con el número de teléfono al que quieras enviar el mensaje
+        const numeroTelefono = '+50496726332'; // Reemplaza con el número de teléfono al que quieras enviar el mensaje
         const mensaje = construirMensajeWhatsApp();
         const enlaceWhatsApp = generarEnlaceWhatsApp(numeroTelefono, mensaje);
         
