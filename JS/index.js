@@ -152,13 +152,13 @@ $(document).ready(function() {
             mensaje += `${item.quantity} ${item.title} ${item.price}\n`;
         });
 
-        mensaje += `\nCon un total de $${total}`;
+        mensaje += `\nCon un total de L ${total}`;
         return mensaje;
     }
 
     // Evento de clic para el botón
     $('#btn_send').click(function() {
-        const numeroTelefono = '+50496726332'; // Reemplaza con el número de teléfono al que quieras enviar el mensaje
+        const numeroTelefono = '+50495109618'; // Reemplaza con el número de teléfono al que quieras enviar el mensaje
         const mensaje = construirMensajeWhatsApp();
         const enlaceWhatsApp = generarEnlaceWhatsApp(numeroTelefono, mensaje);
         
